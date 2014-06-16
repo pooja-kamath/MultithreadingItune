@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		78A004F7194AE01500225286 /* SBControllerForData.m in Sources */ = {isa = PBXBuildFile; fileRef = 78A004F6194AE01500225286 /* SBControllerForData.m */; };
+		78A004FA194AE2A300225286 /* SBControllerForDownloading.m in Sources */ = {isa = PBXBuildFile; fileRef = 78A004F9194AE2A300225286 /* SBControllerForDownloading.m */; };
+		78A004FD194AEC6A00225286 /* SBControllerForParsing.m in Sources */ = {isa = PBXBuildFile; fileRef = 78A004FC194AEC6A00225286 /* SBControllerForParsing.m */; };
+		78A00500194B224C00225286 /* SBDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78A004FF194B224C00225286 /* SBDetailViewController.m */; };
 		78C6569C194ABC9900AA6420 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78C6569B194ABC9800AA6420 /* Foundation.framework */; };
 		78C6569E194ABC9900AA6420 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78C6569D194ABC9900AA6420 /* CoreGraphics.framework */; };
 		78C656A0194ABC9900AA6420 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78C6569F194ABC9900AA6420 /* UIKit.framework */; };
@@ -21,6 +25,9 @@
 		78C656BD194ABC9900AA6420 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78C6569F194ABC9900AA6420 /* UIKit.framework */; };
 		78C656C5194ABC9900AA6420 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 78C656C3194ABC9900AA6420 /* InfoPlist.strings */; };
 		78C656C7194ABC9900AA6420 /* ItunesWithSearchBarTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 78C656C6194ABC9900AA6420 /* ItunesWithSearchBarTests.m */; };
+		78C656D2194ABCC900AA6420 /* SBData.m in Sources */ = {isa = PBXBuildFile; fileRef = 78C656D1194ABCC900AA6420 /* SBData.m */; };
+		78C656D8194AC16500AA6420 /* SBTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78C656D7194AC16500AA6420 /* SBTableViewController.m */; };
+		78C656DB194AC21C00AA6420 /* SBTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 78C656DA194AC21C00AA6420 /* SBTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +41,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		78A004F5194AE01500225286 /* SBControllerForData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBControllerForData.h; sourceTree = "<group>"; };
+		78A004F6194AE01500225286 /* SBControllerForData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBControllerForData.m; sourceTree = "<group>"; };
+		78A004F8194AE2A300225286 /* SBControllerForDownloading.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBControllerForDownloading.h; sourceTree = "<group>"; };
+		78A004F9194AE2A300225286 /* SBControllerForDownloading.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBControllerForDownloading.m; sourceTree = "<group>"; };
+		78A004FB194AEC6A00225286 /* SBControllerForParsing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBControllerForParsing.h; sourceTree = "<group>"; };
+		78A004FC194AEC6A00225286 /* SBControllerForParsing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBControllerForParsing.m; sourceTree = "<group>"; };
+		78A004FE194B224C00225286 /* SBDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBDetailViewController.h; sourceTree = "<group>"; };
+		78A004FF194B224C00225286 /* SBDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBDetailViewController.m; sourceTree = "<group>"; };
 		78C65698194ABC9800AA6420 /* ItunesWithSearchBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ItunesWithSearchBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		78C6569B194ABC9800AA6420 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		78C6569D194ABC9900AA6420 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -53,6 +68,12 @@
 		78C656C2194ABC9900AA6420 /* ItunesWithSearchBarTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ItunesWithSearchBarTests-Info.plist"; sourceTree = "<group>"; };
 		78C656C4194ABC9900AA6420 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		78C656C6194ABC9900AA6420 /* ItunesWithSearchBarTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ItunesWithSearchBarTests.m; sourceTree = "<group>"; };
+		78C656D0194ABCC900AA6420 /* SBData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBData.h; sourceTree = "<group>"; };
+		78C656D1194ABCC900AA6420 /* SBData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBData.m; sourceTree = "<group>"; };
+		78C656D6194AC16500AA6420 /* SBTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBTableViewController.h; sourceTree = "<group>"; };
+		78C656D7194AC16500AA6420 /* SBTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBTableViewController.m; sourceTree = "<group>"; };
+		78C656D9194AC21C00AA6420 /* SBTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBTableViewCell.h; sourceTree = "<group>"; };
+		78C656DA194AC21C00AA6420 /* SBTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,9 +133,11 @@
 		78C656A1194ABC9900AA6420 /* ItunesWithSearchBar */ = {
 			isa = PBXGroup;
 			children = (
+				78C656D5194AC10700AA6420 /* controller */,
+				78C656D4194AC0F800AA6420 /* view */,
+				78C656D3194AC0DA00AA6420 /* model */,
 				78C656AA194ABC9900AA6420 /* SBAppDelegate.h */,
 				78C656AB194ABC9900AA6420 /* SBAppDelegate.m */,
-				78C656AD194ABC9900AA6420 /* Main.storyboard */,
 				78C656B0194ABC9900AA6420 /* SBViewController.h */,
 				78C656B1194ABC9900AA6420 /* SBViewController.m */,
 				78C656B3194ABC9900AA6420 /* Images.xcassets */,
@@ -150,6 +173,42 @@
 				78C656C3194ABC9900AA6420 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		78C656D3194AC0DA00AA6420 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				78C656D0194ABCC900AA6420 /* SBData.h */,
+				78C656D1194ABCC900AA6420 /* SBData.m */,
+			);
+			name = model;
+			sourceTree = "<group>";
+		};
+		78C656D4194AC0F800AA6420 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				78C656AD194ABC9900AA6420 /* Main.storyboard */,
+				78C656D6194AC16500AA6420 /* SBTableViewController.h */,
+				78C656D7194AC16500AA6420 /* SBTableViewController.m */,
+				78C656D9194AC21C00AA6420 /* SBTableViewCell.h */,
+				78C656DA194AC21C00AA6420 /* SBTableViewCell.m */,
+				78A004FE194B224C00225286 /* SBDetailViewController.h */,
+				78A004FF194B224C00225286 /* SBDetailViewController.m */,
+			);
+			name = view;
+			sourceTree = "<group>";
+		};
+		78C656D5194AC10700AA6420 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				78A004F5194AE01500225286 /* SBControllerForData.h */,
+				78A004F6194AE01500225286 /* SBControllerForData.m */,
+				78A004F8194AE2A300225286 /* SBControllerForDownloading.h */,
+				78A004F9194AE2A300225286 /* SBControllerForDownloading.m */,
+				78A004FB194AEC6A00225286 /* SBControllerForParsing.h */,
+				78A004FC194AEC6A00225286 /* SBControllerForParsing.m */,
+			);
+			name = controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -250,8 +309,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78C656D8194AC16500AA6420 /* SBTableViewController.m in Sources */,
+				78A004F7194AE01500225286 /* SBControllerForData.m in Sources */,
 				78C656A8194ABC9900AA6420 /* main.m in Sources */,
 				78C656B2194ABC9900AA6420 /* SBViewController.m in Sources */,
+				78A004FD194AEC6A00225286 /* SBControllerForParsing.m in Sources */,
+				78A004FA194AE2A300225286 /* SBControllerForDownloading.m in Sources */,
+				78C656D2194ABCC900AA6420 /* SBData.m in Sources */,
+				78C656DB194AC21C00AA6420 /* SBTableViewCell.m in Sources */,
+				78A00500194B224C00225286 /* SBDetailViewController.m in Sources */,
 				78C656AC194ABC9900AA6420 /* SBAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -377,6 +443,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ItunesWithSearchBar/ItunesWithSearchBar-Prefix.pch";
 				INFOPLIST_FILE = "ItunesWithSearchBar/ItunesWithSearchBar-Info.plist";
@@ -390,6 +457,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ItunesWithSearchBar/ItunesWithSearchBar-Prefix.pch";
 				INFOPLIST_FILE = "ItunesWithSearchBar/ItunesWithSearchBar-Info.plist";
@@ -457,6 +525,7 @@
 				78C656CC194ABC9900AA6420 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		78C656CD194ABC9900AA6420 /* Build configuration list for PBXNativeTarget "ItunesWithSearchBarTests" */ = {
 			isa = XCConfigurationList;
@@ -465,6 +534,7 @@
 				78C656CF194ABC9900AA6420 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
