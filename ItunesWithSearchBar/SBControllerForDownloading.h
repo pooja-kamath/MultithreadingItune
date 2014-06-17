@@ -7,14 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "SBControllerForParsing.h"
 
-@protocol controllerForDownloadingDelegate
 
--(void)saveData:(NSArray*)dataDownloaded;
-
-@end
-
-@interface SBControllerForDownloading : NSObject
+@interface SBControllerForDownloading : NSObject 
 
 @property (assign) id delegate;
 @property (retain, nonatomic) NSURLConnection *downloadConnection;

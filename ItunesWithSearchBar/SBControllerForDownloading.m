@@ -33,8 +33,9 @@
         _downloadedData=nil;
         
     }
-       _downloadedData = [[NSMutableData alloc] init];
+          _downloadedData = [[NSMutableData alloc] init];
         _downloadConnection = [NSURLConnection connectionWithRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:urlToDownload]]delegate:self];
+    
 }
 -(void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response
 {
@@ -56,7 +57,9 @@
 {
     didBeginDownload=NO;
     NSLog(@"%@",_downloadedData);
-    [_delegate saveData:[[SBControllerForParsing sharedManagerForParsing ]parseData:_downloadedData]];
+    [[SBControllerForParsing sharedManagerForParsing ]parseData:_downloadedData];
+    [_downloadedData release];
+    _downloadedData=nil;
     
 }
 - (void)dealloc

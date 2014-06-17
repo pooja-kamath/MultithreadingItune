@@ -19,24 +19,31 @@
     
     return sharedMyManagerForData;
 }
+int count;
 - (instancetype)init
 {
     self = [super init];
     if (self) {
         searchResults=[[NSMutableArray alloc]init];
+        
     }
     return self;
 }
+
 -(void)searchSongForSearchString:(NSString *)searchString
 {
-     SBControllerForDownloading *sharedManagerForDownloading= [SBControllerForDownloading sharedManagerForDownloading];
-    sharedManagerForDownloading.delegate=self;
+    if(count ==0)
+    {
+     SBControllerForParsing *sharedManagerForParsing= [SBControllerForParsing sharedManagerForParsing];
+    sharedManagerForParsing.delegate=self;
     NSString * initialStringToAppendToUrl=@"https://itunes.apple.com/search?term=";
     NSString *finalStringToAppendToUrl=@"&entity=musicVideo&limit=40";
     searchString=[searchString stringByReplacingOccurrencesOfString:@" " withString:@"+"];
     NSString *searchUrl=[initialStringToAppendToUrl stringByAppendingString:searchString];
     searchUrl=[searchUrl stringByAppendingString:finalStringToAppendToUrl];
     [[SBControllerForDownloading sharedManagerForDownloading]downloadDataWithUrl:searchUrl];
+    }
+    count++;
  }
 
 -(SBData *)getDataAtIndex:(NSInteger)index
@@ -45,12 +52,10 @@
 }
 -(void)saveData:(NSArray*)dataDownloaded
 {
+    count=0;
     [searchResults removeAllObjects];
-   
-    for(int i=0;i<dataDownloaded.count;i++)
-    {
-        [searchResults addObject: [dataDownloaded objectAtIndex:i]];
-    }
+   [ searchResults addObjectsFromArray:dataDownloaded];
+
     [_delegate refreshView];
 }
 

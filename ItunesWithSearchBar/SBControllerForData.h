@@ -7,14 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "SBControllerForDownloading.h"
+#import "SBControllerForParsing.h"
 #import "SBData.h"
 @protocol managerForDataDelegate
 -(void) refreshView;
 @end
 
-@interface SBControllerForData : NSObject <controllerForDownloadingDelegate>
-
+@interface SBControllerForData : NSObject <parseDelegate>
 @property (retain) NSMutableArray *searchResults;
 @property (assign) id delegate;
 

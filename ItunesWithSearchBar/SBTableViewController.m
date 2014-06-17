@@ -33,14 +33,6 @@
     }
     return self;
 }
-- (instancetype)init
-{
-    self = [super init];
-    if (self) {
-        
-    }
-    return self;
-}
 
 - (void)viewDidLoad
 {
@@ -60,25 +52,32 @@
     self.searchBar.delegate=self;
     
 }
-
-- (BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
 {
- 
-    [_sharedManagerForData searchSongForSearchString:searchString];
-    activityViewIndicator=[[UIActivityIndicatorView alloc]     initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+    [_sharedManagerForData searchSongForSearchString:self.searchBar.text];
+    activityViewIndicator=[[UIActivityIndicatorView alloc]initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
     
     activityViewIndicator.center=self.view.center;
+    //    activityViewIndicator.hidesWhenStopped=YES;
+    [activityViewIndicator startAnimating];
     
+    [self.view addSubview:activityViewIndicator];
+
+}
+- (BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString
+{
+    
+       [_sharedManagerForData searchSongForSearchString:searchString];
+   
+    activityViewIndicator=[[UIActivityIndicatorView alloc]initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+    
+    activityViewIndicator.center=self.view.center;
+    activityViewIndicator.hidesWhenStopped=YES;
     [activityViewIndicator startAnimating];
     
     [self.view addSubview:activityViewIndicator];
     return YES;
 }
-- (void)searchDisplayControllerDidEndSearch:(UISearchDisplayController *)controller
-{
-    [activityViewIndicator stopAnimating];
-}
-
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -110,12 +109,12 @@ if( _sharedManagerForData.searchResults.count>0)
 {
     SBTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"SimpleTableItems"];
     
-       [activityViewIndicator stopAnimating];
+    [activityViewIndicator stopAnimating];
     
        dataToDisplay=[_sharedManagerForData getDataAtIndex:indexPath.row];
         cell.trackNameLabel.text=dataToDisplay.trackName;
         cell.collectionNameLabel.text=dataToDisplay.collectionName;
-       cell.artistNameLabel.text=dataToDisplay.artistName;
+        cell.artistNameLabel.text=dataToDisplay.artistName;
         [cell.image setImage:dataToDisplay.image];
     
     return cell;
@@ -128,10 +127,9 @@ if( _sharedManagerForData.searchResults.count>0)
 
 -(void)refreshView
 {
-    
-    [self resignFirstResponder];
-   [self.tableView reloadData];
+
     [self.searchDisplayController.searchResultsTableView reloadData];
+    [self.tableView reloadData];
     
 }
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(NSIndexPath *)sender

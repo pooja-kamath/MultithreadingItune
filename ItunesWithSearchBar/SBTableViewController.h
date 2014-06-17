@@ -11,7 +11,7 @@
 @interface SBTableViewController : UITableViewController <UISearchBarDelegate,UISearchDisplayDelegate>
 
 @property (assign) SBControllerForData *sharedManagerForData;
-@property(assign) SBControllerForDownloading *sharedManagerForDownloading;
+@property(assign) SBControllerForParsing *sharedManagerForDownloading;
 @property (assign)UIActivityIndicatorView *activityViewIndicator;
 @property (assign)SBData *dataToDisplay;
 @end
